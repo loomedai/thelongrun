@@ -5,7 +5,7 @@ if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
     $db ->sql();
-    $sql = "INSERT INTO ghibli()";
+    $sql = "INSERT INTO ghibli(prodTitel, prodGenre, prodYear, prodCountry, prodMusic, prodCast, prodDir, prodTime, prodDes)";
     $bind = [];
 
 }
@@ -125,7 +125,7 @@ if(!empty($_POST["data"])){
                         <div>
                             <button type="submit"
                                     name="upload">
-                                UPLOAD
+                                Gem
                             </button>
                     </div>
 
