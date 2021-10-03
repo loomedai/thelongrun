@@ -27,12 +27,27 @@
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="prodDes">Produkt Beskrivelse</label>
-                    <input class="form-control" type="text" name="data[prodDes]" id="prodDes" placeholder="Produkt Beksrivelse" value="">
+                    <label for="prodGenre">Genre</label>
+                    <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
 
                 </div>
 
             </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodYear">Udgivelsesår </label>
+                    <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="Udgivelsesår" value="">
+
+                </div>
+
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <label for="prodDes">Produkt Beskrivelse</label>
+                    <textarea class="form-control" name="data[prodDes]" id="prodDes"></textarea>
+                </div>
+
+
 
             <div class="col-12 col-md-6">
 
