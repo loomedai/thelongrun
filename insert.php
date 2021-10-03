@@ -12,6 +12,8 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.scss" rel="stylesheet" type="text/css">
 
+    <img src="images/totoro2.png" id="totorophoto">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://cdn.tiny.cloud/1/y7etbb6fgqruwg5o86t8eo2wywvvdlu54udfhebfjweavmfg/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>

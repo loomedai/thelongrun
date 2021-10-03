@@ -3,8 +3,7 @@
 }
 
 body {
-	margin: 0;
-	background-image: url("images/totoro.png");
+	margin: 30px;
 	background-color: lightgray;
 }
 
@@ -32,4 +31,7 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+#totorophoto{
+margin: auto;
 }
