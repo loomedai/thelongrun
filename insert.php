@@ -28,7 +28,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodGenre">Genre</label>
-                    <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="action, komedie, documentar..." value="">
+                    <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Action, komedie, documentar..." value="">
 
                 </div>
 
@@ -36,7 +36,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodYear">Udgivelsesår </label>
-                    <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="9999" value="">
+                    <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="1988" value="">
                 </div>
             </div>
 
@@ -80,7 +80,7 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodTime">Længde </label>
-                    <input class="form-control" type="number" step="0.1" name="data[prodTime]" id="prodTime" placeholder="1.50" value="">
+                    <input class="form-control" type="number" step="0.1" name="data[prodTime]" id="prodTime" placeholder="1 time" value="">
                 </div>
             </div>
 
