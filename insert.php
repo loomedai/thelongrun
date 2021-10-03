@@ -5,7 +5,7 @@ if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
     $db ->sql();
-    $sql = "INSERT INTO ghibli(prodTitel, prodGenre, prodYear, prodCountry, prodMusic, prodCast, prodDir, prodTime, prodDes)";
+    $sql = "INSERT INTO ghibli (prodTitel, prodGenre, prodYear, prodCountry, prodMusic, prodCast, prodDir, prodTime, prodDes) values(:prodTitel, :prodGenre, :prodYear, :prodCountry, :prodMusic, :prodCast, :prodDir, :prodTime, :prodDes)";
     $bind = [];
 
 }
