@@ -85,6 +85,13 @@
 
             </div>
 
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodTime">Længde </label>
+                    <input class="form-control" type="number" step="0.1" name="data[prodTime]" id="prodTime" placeholder="1.50" value="">
+                </div>
+            </div>
+
 
             <div class="col-12">
                 <div class="form-group">
