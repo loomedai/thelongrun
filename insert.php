@@ -20,15 +20,15 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="prodTitel">Produkt Titel</label>
-                    <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Produkt titel" value="">
+                    <label for="prodTitel">Titel</label>
+                    <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Filmens titel" value="">
                 </div>
             </div>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodGenre">Genre</label>
-                    <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="Genre" value="">
+                    <input class="form-control" type="text" name="data[prodGenre]" id="prodGenre" placeholder="action, komedie, documentar..." value="">
 
                 </div>
 
@@ -36,11 +36,56 @@
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodYear">Udgivelsesår </label>
-                    <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="Udgivelsesår" value="">
+                    <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="9999" value="">
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodCountry">Udgivelses land</label>
+                    <input class="form-control" type="text" name="data[prodCountry]" id="prodCountry" placeholder="Land" value="">
 
                 </div>
 
             </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodMusic">Musik</label>
+                    <input class="form-control" type="text" name="data[prodMusic]" id="prodMusic" placeholder="Komponist, okestra, band..." value="">
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodCast">Medvirkende</label>
+                    <input class="form-control" type="text" name="data[prodCast]" id="prodCast" placeholder="Skuespillere, stemmer..." value="">
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodCast">Medvirkende</label>
+                    <input class="form-control" type="text" name="data[prodCast]" id="prodCast" placeholder="Skuespillere, stemmer..." value="">
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <label for="prodDir">Director</label>
+                    <input class="form-control" type="text" name="data[prodDir]" id="prodDir" placeholder="Instruktør" value="">
+
+                </div>
+
+            </div>
+
+
             <div class="col-12">
                 <div class="form-group">
                     <label for="prodDes">Produkt Beskrivelse</label>
@@ -49,7 +94,9 @@
 
 
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 offset-md-6">
+                <button class="form-control btn btn-primary" type="submit" id="btnSubmit">Opret Film</button>
+
 
             </div>
 
