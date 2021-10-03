@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <form method="post" action="insert.php">
+    <form method="post" action="insert.php" enctype="multipart/form-data">
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -67,14 +67,6 @@
 
             </div>
 
-            <div class="col-12 col-md-6">
-                <div class="form-group">
-                    <label for="prodCast">Medvirkende</label>
-                    <input class="form-control" type="text" name="data[prodCast]" id="prodCast" placeholder="Skuespillere, stemmer..." value="">
-
-                </div>
-
-            </div>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -106,6 +98,21 @@
 
 
             </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                        <input type="file"
+                               name="uploadfile"
+                               value="" />
+
+                        <div>
+                            <button type="submit"
+                                    name="upload">
+                                UPLOAD
+                            </button>
+                    </div>
+
+                </div>
 
         </div>
     </form>
