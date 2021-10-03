@@ -10,7 +10,7 @@
     <meta name="copyright" content="Information om copyright">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.scss" rel="stylesheet" type="text/css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -87,7 +87,7 @@
 
             <div class="col-12">
                 <div class="form-group">
-                    <label for="prodDes">Produkt Beskrivelse</label>
+                    <label for="prodDes">Beskrivelse</label>
                     <textarea class="form-control" name="data[prodDes]" id="prodDes"></textarea>
                 </div>
 
