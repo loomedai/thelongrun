@@ -1,3 +1,16 @@
+<?php
+require "settings/init.php";
+
+if(!empty($_POST["data"])){
+    $data = $_POST["data"];
+
+    $db ->sql();
+    $sql = "INSERT INTO ghibli()";
+    $bind = [];
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
