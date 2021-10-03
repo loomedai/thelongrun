@@ -1,15 +1,20 @@
 <?php
 require "settings/init.php";
 
+
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
 
-    $db ->sql();
-    $sql = "INSERT INTO ghibli()";
-    $bind = [];
+    $sql = "INSERT INTO ghiblifilm (prodTitel, prodDes, prodYear, prodCountry, prodDir, prodTime, prodCast, prodMusic, prodGenre) VALUES (:prodTitel, :prodDes, :prodYear, :prodCountry, :prodDir, :prodTime, :prodCast, :prodMusic, :prodGenre)";
+    $bind = [":prodTitel" => $data["prodTitel"], ":prodDes" => $data["prodDes"], ":prodYear" => $data["prodYear"], ":prodCountry" => $data["prodCountry"], ":prodDir" => $data["prodDir"], ":prodTime" => $data["prodTime"], ":prodCast" => $data["prodCast"], ":prodMusic" => $data["prodMusic"], ":prodGenre" => $data["prodGenre"]];
 
+    $db ->sql( $sql, $bind, false);
+    echo "Filmen er nu indsat. <a href='insert.php'>Indsæt en ny film.</a>)";
+    exit;
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="da">
