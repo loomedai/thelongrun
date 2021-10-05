@@ -9,7 +9,7 @@ if(!empty($_POST["data"])){
     $bind = [":prodTitel" => $data["prodTitel"], ":prodDes" => $data["prodDes"], ":prodYear" => $data["prodYear"], ":prodCountry" => $data["prodCountry"], ":prodDir" => $data["prodDir"], ":prodTime" => $data["prodTime"], ":prodCast" => $data["prodCast"], ":prodMusic" => $data["prodMusic"], ":prodGenre" => $data["prodGenre"]];
 
     $db ->sql( $sql, $bind, false);
-    echo "Filmen er nu indsat. <a href='insert.php'>Indsæt en ny film.</a>)";
+    echo "Filmen er nu indsat. <a href='insert.php'>Indsæt en ny film.</a>";
     exit;
 }
 ?>
