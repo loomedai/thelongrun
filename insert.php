@@ -4,9 +4,25 @@ require "settings/init.php";
 
 if(!empty($_POST["data"])){
     $data = $_POST["data"];
+    $file = $_FILES;
 
-    $sql = "INSERT INTO ghiblifilm (prodTitel, prodDes, prodYear, prodCountry, prodDir, prodTime, prodCast, prodMusic, prodGenre) VALUES (:prodTitel, :prodDes, :prodYear, :prodCountry, :prodDir, :prodTime, :prodCast, :prodMusic, :prodGenre)";
-    $bind = [":prodTitel" => $data["prodTitel"], ":prodDes" => $data["prodDes"], ":prodYear" => $data["prodYear"], ":prodCountry" => $data["prodCountry"], ":prodDir" => $data["prodDir"], ":prodTime" => $data["prodTime"], ":prodCast" => $data["prodCast"], ":prodMusic" => $data["prodMusic"], ":prodGenre" => $data["prodGenre"]];
+    if(!empty($file["prodPhoto"]["tmp_name"])){
+        move_uploaded_file($file["prodPhoto"]["tmp_name"], "uploads/" . basename($file["prodPhoto"]["name"]));
+    }
+
+
+    $sql = "INSERT INTO ghiblifilm (prodTitel, prodDes, prodYear, prodCountry, prodDir, prodTime, prodCast, prodMusic, prodGenre, prodPhoto) VALUES (:prodTitel, :prodDes, :prodYear, :prodCountry, :prodDir, :prodTime, :prodCast, :prodMusic, :prodGenre, :prodPhoto)";
+    $bind = [":prodTitel" => $data["prodTitel"],
+        ":prodDes" => $data["prodDes"],
+        ":prodYear" => $data["prodYear"],
+        ":prodCountry" => $data["prodCountry"],
+        ":prodDir" => $data["prodDir"],
+        ":prodTime" => $data["prodTime"],
+        ":prodCast" => $data["prodCast"],
+        ":prodMusic" => $data["prodMusic"],
+        ":prodGenre" => $data["prodGenre"],
+        ":prodPhoto" => (!empty($file["prodPhoto"]["tmp_name"])) ? $file["prodPhoto"]["name"] : NULL,
+    ];
 
     $db ->sql( $sql, $bind, false);
     echo "Filmen er nu indsat. <a href='insert.php'>Indsæt en ny film.</a>";
@@ -17,7 +33,7 @@ if(!empty($_POST["data"])){
 
 
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
 
@@ -46,6 +62,7 @@ if(!empty($_POST["data"])){
                     <input class="form-control" type="text" name="data[prodTitel]" id="prodTitel" placeholder="Filmens titel" value="">
                 </div>
             </div>
+            <br>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -55,12 +72,14 @@ if(!empty($_POST["data"])){
                 </div>
 
             </div>
+            <br>
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <label for="prodYear">Udgivelsesår </label>
                     <input class="form-control" type="number" step="0" name="data[prodYear]" id="prodYear" placeholder="1988" value="">
                 </div>
             </div>
+            <br>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -70,6 +89,7 @@ if(!empty($_POST["data"])){
                 </div>
 
             </div>
+            <br>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -79,6 +99,7 @@ if(!empty($_POST["data"])){
                 </div>
 
             </div>
+            <br>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
@@ -88,6 +109,7 @@ if(!empty($_POST["data"])){
                 </div>
 
             </div>
+            <br>
 
 
             <div class="col-12 col-md-6">
@@ -98,13 +120,15 @@ if(!empty($_POST["data"])){
                 </div>
 
             </div>
+            <br>
 
             <div class="col-12 col-md-6">
                 <div class="form-group">
-                    <label for="prodTime">Længde </label>
+                    <label for="prodTime">Længde</label>
                     <input class="form-control" type="number" step="0.1" name="data[prodTime]" id="prodTime" placeholder="1 time" value="">
                 </div>
             </div>
+            <br>
 
 
             <div class="col-12">
@@ -112,7 +136,13 @@ if(!empty($_POST["data"])){
                     <label for="prodDes">Beskrivelse</label>
                     <textarea class="form-control" name="data[prodDes]" id="prodDes"></textarea>
                 </div>
+                <br>
 
+                <div class="col-12">
+                    <label class="form-label" for="prodPhoto">Billede</label>
+                    <input type="file" class="form-control" id="prodPhoto" name="prodPhoto">
+                </div>
+                <br>
 
 
             <div class="col-12 col-md-6 offset-md-6">
@@ -121,18 +151,7 @@ if(!empty($_POST["data"])){
 
             </div>
 
-                <div class="col-12 col-md-6">
-                    <div class="form-group">
-                        <input type="file"
-                               name="uploadfile"
-                               value="" />
 
-                        <div>
-                            <button type="submit"
-                                    name="upload">
-                                UPLOAD
-                            </button>
-                    </div>
 
                 </div>
 
