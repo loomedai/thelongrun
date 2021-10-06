@@ -1,4 +1,10 @@
 <?php
 require "settings/init.php";
 
-$sql = "SELECT * FROM ghiblifilm WHERE ID = Arretty";
+
+$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm where prodTitel = 'Arrietty'");
+foreach ($ghiblifilm as $Arrietty){
+    echo $Arrietty->prodTitel . "<br>" . $Arrietty->prodDes . "<br>" . $Arrietty->prodPhoto . "<br>" . $Arrietty->prodYear;
+}
+    ?>
+
