@@ -49,6 +49,14 @@ foreach ($ghiblifilm as $Arrietty){
     <br>
 
     <div class="row">
+        <div class="column">
+            <?php
+            echo "<div>" . $Arrietty->prodDes;
+            ?>
+        </div>
+        <br>
+
+    <div class="row">
         <div class="column" id="colright">
             <?php
             echo "<div>" . $Arrietty->prodYear . "</div><div>" . $Arrietty->prodDir . "</div><div>" . $Arrietty->prodMusic . "</div><div>" . $Arrietty->prodCountry . "</div>";
