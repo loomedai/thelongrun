@@ -9,7 +9,7 @@ $ghiblifilm = $db->sql("SELECT * FROM ghiblifilm WHERE prodTitel = 'ponyo'");
 <head>
     <meta charset="utf-8">
 
-    <title>Sigende titel</title>
+    <title>Ponyo</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
