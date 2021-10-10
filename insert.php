@@ -81,7 +81,6 @@ if(!empty($_POST["data"])){
 
     <img src="images/totoro2.png" id="totorophoto">
 </head>
-
 <body>
     <form method="post" action="insert.php" enctype="multipart/form-data">
         <div class="row">

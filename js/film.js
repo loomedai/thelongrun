@@ -34,12 +34,12 @@ export default class Film {
             col.classList.add('col-md-6', 'col-lg-4', 'col-xl-3');
 
             col.innerHTML = `
-                <div class="card">
+                <div class="card order">
                     <img src="uploads/${item.prodPhoto}" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-titel">${item.prodTitel}</h5>
                         <p class="card-text">${item.prodDes}</p>
-                        <a href="arrietty.php?prodId=${item.prodId}" class="btn btn-primary text-white w-100">Læs mere</a>
+                        <a href="arrietty.php?prodId=${item.prodId}" class="btn btn-secondary text-white w-100">Læs mere</a>
                 </div>
                 </div>
                 
@@ -63,5 +63,7 @@ export default class Film {
 
 
     }
+
+
 
 }
