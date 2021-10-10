@@ -62,7 +62,7 @@ if(!empty($_POST["data"])){
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Library
                         </a>
-                        <ul class="dropdown-menu" href="library.php" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="library.php">All films</a></li>
                             <li><a class="dropdown-item" href="arrietty.php">Arrietty</a></li>
                             <li><a class="dropdown-item" href="ponyo.php">Ponyo</a></li>
