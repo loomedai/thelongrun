@@ -48,7 +48,6 @@ require "settings/init.php";
 </head>
 
 <body>
-<p> dette er en test</p>
 <div class="container">
     <div class="film">
         <div class="filter p-5">
