@@ -1,20 +1,24 @@
 <?php
 require "settings/init.php";
+
+$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm WHERE prodTitel = 'ponyo'");
 ?>
 
 <!DOCTYPE html>
-<html lang="da" xmlns="http://www.w3.org/1999/html">
+<html lang="da">
 <head>
     <meta charset="utf-8">
 
-    <title>Arrietty</title>
+    <title>Sigende titel</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
 
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.scss" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
         <div class="container-fluid">
@@ -44,58 +48,110 @@ require "settings/init.php";
         </div>
     </nav>
 
-    <img src="images/totoro2.png" id="totorophoto">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <script src="https://cdn.tiny.cloud/1/y7etbb6fgqruwg5o86t8eo2wywvvdlu54udfhebfjweavmfg/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
-<body>
-<?php
 
-$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm where prodTitel = 'Arrietty'");
-foreach ($ghiblifilm as $Arrietty){
-   }
+<body>
+
+<div class="">test</div>
+<?php
+foreach ($ghiblifilm as $ponyo) {
     ?>
-<br>
-<br>
 <div class="row">
-    <div class="col col-md-12" id="prodTitel">
-        <h1>
+    <div class="col-12 col-md-6 bg-blue">
         <?php
-        echo $Arrietty->prodTitel . "<br>" . "借りぐらしのアリエッティ";
-        ?></h1>
+        ?>
     </div>
 
 
-<div class="row">
- <div class="col col-md-12">
-     <?php
-     echo "<br><img src='uploads/karigurashi009.jpg" . $Arrietty->prodPhoto .  "'><br>";
-     ?>
+    <div class="col-12 col-md-6 bg-blue font-italic">
+        <?php
+        echo $ponyo->prodTitel;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodYear;
+
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo "<br><img src='images/" . $ponyo->prodPhoto . "'><br>";
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodCast;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodCountry;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodGenre;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodMusic;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodDir;
+        ?>
+    </div>
+
+
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodDes;
+        ?>
+    </div>
+
+
+    <div class="col-12 col-md-6">
+        <?php
+        echo $ponyo->prodTime;
+        }
+        ?>
+    </div>
+
 </div>
-    <br>
 
-    <div class="row">
-        <div class="column">
-            <?php
-            echo "<div>" . $Arrietty->prodDes;
-            ?>
-        </div>
-        <br>
-
-    <div class="row">
-        <div class="column" id="colright">
-            <?php
-            echo "<div>" . $Arrietty->prodYear . "</div><div>" . $Arrietty->prodDir . "</div><div>" . $Arrietty->prodMusic . "</div><div>" . $Arrietty->prodCountry . "</div>";
-            ?>
-        </div>
-
-        <br>
-        <div class="row">
-            <div class="col col-md-6">
-                <?php
-                echo "<div>" . $Arrietty->prodCast . "</div><div>" . $Arrietty->prodGenre . "</div><div>" . $Arrietty->prodTime . "</div>";
-                ?>
-            </div>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
