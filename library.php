@@ -26,7 +26,7 @@ require "settings/init.php";
         <div class="filter p-5">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <input type="search" class="form-control nameSearch" placeholder="søg">
+                    <input type="search" class="form-control nameSearch" placeholder="Søg">
                 </div>
             </div>
         </div>
