@@ -166,6 +166,7 @@ if(!empty($_POST["data"])){
             selector: '#prodDes',
 
         });
+        alert("Denne side vil måske bruge coockies en dag. Who knows. Du har ikke noget valg! ")
     </script>
 </body>
 </html>
