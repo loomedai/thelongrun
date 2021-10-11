@@ -66,20 +66,20 @@ foreach ($ghiblifilm as $Arrietty){
 
 <div class="row bg-light rounded p-5" id="prodTitel">
 
-        <div class="col col-md-12 col-xs-1 d-flex justify-content-center mb-lg-4">
+        <div class="col col-12 d-flex justify-content-center mb-lg-4">
             <h1>
             <?php
             echo $Arrietty->prodTitel . "<br>" . "借りぐらしのアリエッティ";
             ?></h1>
         </div>
 
-        <div class="col col-md-12 d-flex justify-content-center">
+        <div class="col d-flex col-12 justify-content-center">
                 <?php
                 echo "<br><img src='uploads/karigurashi009.jpg7" . $Arrietty->prodPhoto .  "'><br>";
                 ?>
         </div>
 
-        <div class="col col-md-12 d-flex justify-content-center mt-lg-4">
+        <div class="col d-flex col-12 justify-content-center mt-lg-4">
             <?php
             echo $Arrietty->prodDes . "<br>";
             ?>
