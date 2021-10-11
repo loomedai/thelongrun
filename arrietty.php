@@ -91,7 +91,7 @@ foreach ($ghiblifilm as $Arrietty){
 
 
 <div class="container pt-3">
-    <div class="row">
+    <div class="row ">
 
             <div class="col-md-4">
                 <p><b>Year</b></p>
