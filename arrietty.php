@@ -73,7 +73,7 @@ foreach ($ghiblifilm as $Arrietty){
             echo $Arrietty->prodTitel . "<br>" . "借りぐらしのアリエッティ";
             ?></h1>
         </div>
-    <br>
+
 
         <div class="col d-flex col-12 justify-content-center">
                 <?php
