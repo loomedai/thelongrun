@@ -93,7 +93,7 @@ foreach ($ghiblifilm as $Arrietty){
 <div class="container pt-3">
     <div class="row">
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <p><b>Year</b></p>
                 <?php
                 echo $Arrietty->prodYear . "<br>";
@@ -101,7 +101,7 @@ foreach ($ghiblifilm as $Arrietty){
             </div>
 
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <p><b>Director</b></p>
                 <?php
                 echo $Arrietty->prodDir . "<br>";
@@ -109,7 +109,7 @@ foreach ($ghiblifilm as $Arrietty){
             </div>
 
 
-            <div class="col-4">
+            <div class="col-md-4">
                 <p><b>Music</b></p>
                 <?php
                 echo $Arrietty->prodMusic . "<br>";
@@ -121,21 +121,21 @@ foreach ($ghiblifilm as $Arrietty){
     <div class="container">
         <div class="row">
 
-            <div class="col-4">
+            <div class="col-md-4">
                     <p><b>Cast</b></p>
                     <?php
                     echo $Arrietty->prodCast . "<br>";
                     ?>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
                     <p><b>Genre</b></p>
                     <?php
                     echo $Arrietty->prodGenre . "<br>";
                     ?>
             </div>
 
-            <div class="col-4">
+            <div class="col-md-4">
                     <p><b>Country</b></p>
                     <?php
                     echo $Arrietty->prodCountry . "<br>";
