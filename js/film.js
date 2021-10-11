@@ -38,8 +38,7 @@ export default class Film {
                     <img src="uploads/${item.prodPhoto}" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-titel mb-3">${item.prodTitel}</h5>
-                        
-                        <a href="arrietty.php?prodId=${item.prodId}" class="btn btn-secondary text-white w-100">Læs mere</a>
+                        <a href="library.php?prodId=${item.prodId}" class="btn btn-secondary text-white w-100">Læs om filmen</a>
                 </div>
                 </div>
                 
