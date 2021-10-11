@@ -1,6 +1,5 @@
 <?php
 require "settings/init.php";
-
 $ghiblifilm = $db->sql("SELECT * FROM ghiblifilm WHERE prodTitel = 'ponyo'");
 ?>
 
