@@ -76,7 +76,7 @@ foreach ($ghiblifilm as $Arrietty){
 
         <div class="col d-flex col-12 justify-content-center">
                 <?php
-                echo "<br><img src='uploads/karigurashi009.jpg7" . $Arrietty->prodPhoto .  "'><br>";
+                echo "<br><img src='uploads/karigurashi009.jpg'" . $Arrietty->prodPhoto .  "><br>";
                 ?>
         </div>
 
