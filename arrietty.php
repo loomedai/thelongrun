@@ -109,7 +109,7 @@ foreach ($ghiblifilm as $Arrietty){
         <div class="row">
             <div class="col col-md-6">
                 <?php
-                echo "<div><p>Cast</p>" . $Arrietty->prodCast . "</div><div><p>Genre</p>" . $Arrietty->prodGenre . "</div>;
+                echo "<div><p>Cast</p>" . $Arrietty->prodCast . "</div><div><p>Genre</p>" . $Arrietty->prodGenre . "</div><div>" . $Arrietty->prodTime . "</div>";
                 ?>
             </div>
 </body>
