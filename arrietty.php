@@ -115,7 +115,7 @@ foreach ($ghiblifilm as $Arrietty){
                 echo $Arrietty->prodMusic . "<br>";
                 ?>
             </div>
-
+    </div>
 </div>
         <br>
     <div class="container">
