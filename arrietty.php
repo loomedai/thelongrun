@@ -60,6 +60,17 @@ foreach ($ghiblifilm as $Arrietty){
     ?>
 <br>
 <br>
+
+
+
+
+
+
+
+
+
+
+
 <div class="row">
     <div class="col col-md-12" id="prodTitel">
         <h1>
@@ -72,13 +83,14 @@ foreach ($ghiblifilm as $Arrietty){
 <div class="row">
  <div class="col col-md-12">
      <?php
-     echo "<br><img src='uploads/karigurashi009.jpg" . $Arrietty->prodPhoto .  "'><br>";
+     echo "<br><img src='uploads/karigurashi009.jpg7" . $Arrietty->prodPhoto .  "'><br>";
      ?>
 </div>
     <br>
 
     <div class="row">
         <div class="column">
+
             <?php
             echo "<div>" . $Arrietty->prodDes;
             ?>
