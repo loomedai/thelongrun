@@ -91,19 +91,59 @@ foreach ($ghiblifilm as $Arrietty){
 
         <br>
 
+    <div class="container">
     <div class="row">
-        <div class="column" id="colright">
+        <div class="column">
 
-            <?php
-            echo "<div> <p>Year</p>" . $Arrietty->prodYear . "</div><div><p>Director</p>" . $Arrietty->prodDir . "</div><div><p>Music</p>" . $Arrietty->prodMusic . "</div><div><p>Country</p>" . $Arrietty->prodCountry . "</div>";
-            ?>
+            <div class="col-4">
+                <p>Year</p>
+                <?php
+                echo $Arrietty->prodYear . "<br>";
+                ?>
+            </div>
+
+
+            <div class="col-4">
+                <p>Director</p>
+                <?php
+                echo $Arrietty->prodDir . "<br>";
+                ?>
+            </div>
+
+
+            <div class="col-4">
+                <p>Music</p>
+                <?php
+                echo $Arrietty->prodMusic . "<br>";
+                ?>
+            </div>
         </div>
+    </div>
 
         <br>
         <div class="row">
             <div class="col col-md-6">
-                <?php
-                echo "<div><p>Cast</p>" . $Arrietty->prodCast . "</div><div><p>Genre</p>" . $Arrietty->prodGenre . "</div><div>" . $Arrietty->prodTime . "</div>";
-                ?>
+
+                <div class="col">
+                    <p>Cast</p>
+                    <?php
+                    echo $Arrietty->prodCast . "<br>";
+                    ?>
+                </div>
+
+                <div class="col">
+                    <p>Genre</p>
+                    <?php
+                    echo $Arrietty->prodGenre . "<br>";
+                    ?>
+                </div>
+
+                <div class="col">
+                    <p>Country</p>
+                    <?php
+                    echo $Arrietty->prodCountry . "<br>";
+                    ?>
+                </div>
+
             </div>
 </body>

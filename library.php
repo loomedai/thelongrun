@@ -1,6 +1,6 @@
 <?php
 require "settings/init.php";
-$ghiblifilm = $db->sql("SELECT * FROM `ghiblifilm` ORDER BY `ghiblifilm`.`prodTitel` ASC");
+$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm ORDER BY ghiblifilm.prodTitel ASC");
 ?>
 
 <!DOCTYPE html>
