@@ -18,10 +18,10 @@ $header = "HTTP/1.1 201 Created"; // Creating a resource results in a 201 Create
 $header = "HTTP/1.1 204 No Content"; // Updating or deleting a resource results in a 204 No Content response.
  */
 header('Content-Type: application/json; charset=utf-8');
-/*
+
 $data["password"] = "Ghibli";
 $data["nameYear"] = '2002';
-*/
+
 
 if($data["password"] == "Ghibli") {
     $sql = "SELECT * FROM ghiblifilm WHERE 1=1";

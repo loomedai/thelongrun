@@ -179,8 +179,6 @@ if(!empty($_POST["data"])){
 
             </div>
 
-
-
                 </div>
 
         </div>
