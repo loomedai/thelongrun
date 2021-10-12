@@ -23,8 +23,6 @@ export default class Film {
 
     async render(){
         const data = await this.getData();
-        console.log(data);
-
 
         const row = document.createElement('div');
         row.classList.add('row', 'g-4');
