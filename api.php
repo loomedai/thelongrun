@@ -36,6 +36,9 @@ if($data["password"] == "Ghibli") {
         $sql .= " AND prodYear < :prodYear";
         $bind[":prodYear"] = $data["nameYear"];
     }
+
+    $sql .= " ORDER BY prodTitel ASC";
+
     $ghiblifilm = $db->sql( $sql, $bind);
     header("HTTP/1.1 200 OK");
 

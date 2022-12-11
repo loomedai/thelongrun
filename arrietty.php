@@ -25,8 +25,8 @@ require "settings/init.php";
 <body>
 <?php
 
-$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm where prodTitel = 'Arrietty'");
-foreach ($ghiblifilm as $Arrietty){
+$ghiblifilm = $db->sql("SELECT * FROM ghiblifilm where prodId = :prodId", [":prodId"=>$_GET["prodId"]]);
+foreach ($ghiblifilm as $film){
    }
     ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -70,20 +70,21 @@ foreach ($ghiblifilm as $Arrietty){
         <div class="col col-12 d-flex justify-content-center mb-lg-4">
             <h1>
             <?php
-            echo $Arrietty->prodTitel . "<br>" . "借りぐらしのアリエッティ";
+            echo $film->prodTitel ;
+            // . "<br>" . "借りぐらしのアリエッティ"
             ?></h1>
         </div>
 
 
         <div class="col d-flex col-12 justify-content-center">
                 <?php
-                echo "<br><img src='uploads/karigurashi009.jpg'" . $Arrietty->prodPhoto .  "><br>";
+                echo "<br><img src='uploads/" . $film->prodPhoto .  "'><br>";
                 ?>
         </div>
 
         <div class="col d-flex col-12 justify-content-center mt-lg-4">
             <?php
-            echo $Arrietty->prodDes . "<br>";
+            echo $film->prodDes . "<br>";
             ?>
         </div>
 
@@ -96,7 +97,7 @@ foreach ($ghiblifilm as $Arrietty){
             <div class="col-md-4">
                 <p><b>Year</b></p>
                 <?php
-                echo $Arrietty->prodYear . "<br>";
+                echo $film->prodYear . "<br>";
                 ?>
             </div>
 
@@ -104,7 +105,7 @@ foreach ($ghiblifilm as $Arrietty){
             <div class="col-md-4">
                 <p><b>Director</b></p>
                 <?php
-                echo $Arrietty->prodDir . "<br>";
+                echo $film->prodDir . "<br>";
                 ?>
             </div>
 
@@ -112,7 +113,7 @@ foreach ($ghiblifilm as $Arrietty){
             <div class="col-md-4">
                 <p><b>Music</b></p>
                 <?php
-                echo $Arrietty->prodMusic . "<br>";
+                echo $film->prodMusic . "<br>";
                 ?>
             </div>
     </div>
@@ -124,21 +125,21 @@ foreach ($ghiblifilm as $Arrietty){
             <div class="col-md-4">
                     <p><b>Cast</b></p>
                     <?php
-                    echo $Arrietty->prodCast . "<br>";
+                    echo $film->prodCast . "<br>";
                     ?>
             </div>
 
             <div class="col-md-4">
                     <p><b>Genre</b></p>
                     <?php
-                    echo $Arrietty->prodGenre . "<br>";
+                    echo $film->prodGenre . "<br>";
                     ?>
             </div>
 
             <div class="col-md-4">
                     <p><b>Country</b></p>
                     <?php
-                    echo $Arrietty->prodCountry . "<br>";
+                    echo $film->prodCountry . "<br>";
                     ?>
             </div>
 

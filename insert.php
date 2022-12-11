@@ -166,7 +166,7 @@ if(!empty($_POST["data"])){
                 </div>
                 <br>
 
-                <div class="col-12">
+                <div class="col-12 ">
                     <label class="form-label" for="prodPhoto">Billede</label>
                     <input type="file" class="form-control" id="prodPhoto" name="prodPhoto">
                 </div>
